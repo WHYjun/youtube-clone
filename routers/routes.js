@@ -1,8 +1,8 @@
 // GLOBAL URL
 const HOME = "/";
 const JOIN = "/join";
-const LOGIN = "/login";
-const LOGOUT = "/logout";
+const signin = "/signin";
+const signout = "/signout";
 const SEARCH = "/search";
 
 // USERS URL
@@ -22,8 +22,8 @@ const DELETE_VIDEO = "/:id/delete";
 const routes = {
   home: HOME,
   join: JOIN,
-  login: LOGIN,
-  logout: LOGOUT,
+  signin: signin,
+  signout: signout,
   search: SEARCH,
   users: USERS,
   userDetail: USER_DETAIL,
