@@ -4,4 +4,17 @@ A clone of [Youtube](https://www.youtube.com) on JavaScript provided by [NomadCo
 
 ## features from course
 
+### Pages
+
+- [ ] Home
+- [x] Join
+- [x] Signin
+- [x] Search
+- [ ] User Detail
+- [ ] Edit Profile
+- [ ] Change Password
+- [ ] Upload
+- [ ] Video Detail
+- [ ] Edit Video
+
 ## modification made by me
