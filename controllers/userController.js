@@ -17,8 +17,9 @@ export const getSignin = (req, res) =>
 export const postSignin = (req, res) => {
   res.redirect(routes.home);
 };
-export const signout = (req, res) =>
-  res.render('signout', { pageTitle: 'Sign Out' });
+export const signout = (req, res) => {
+  res.redirect(routes.home);
+};
 export const userDetail = (req, res) =>
   res.render('userDetail', { pageTitle: 'User Detail' });
 export const editProfile = (req, res) =>
