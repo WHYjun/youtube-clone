@@ -21,6 +21,7 @@
     "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "devDependencies": {
+    "eslint": "^6.0.1",
     "nodemon": "^1.18.6"
   }
 }
