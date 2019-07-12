@@ -1,31 +1,38 @@
 {
-  "name": "wetube",
+  "name": "youtube-clone",
   "version": "1.0.0",
   "description": "Cloning Youtube with Vanilla and NodeJS",
-  "author": "Nicolás Serrano Arévalo",
+  "author": "Young Jun Choi",
   "dependencies": {
     "@babel/core": "^7.1.5",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.5",
+    "autoprefixer": "^9.6.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.0.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^3.15.0",
     "mongoose": "^5.3.12",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "dev:server": "nodemon --exec babel-node init.js --delay 2",
-    "dev:assets": "WEBPACK_ENV=development webpack",
-    "build:assets": "WEBPACK_ENV=production webpack"
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack",
+    "build:assets": "cross-env WEBPACK_ENV=production webpack"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
-    "nodemon": "^1.18.6"
+    "nodemon": "^1.18.6",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
   }
 }
