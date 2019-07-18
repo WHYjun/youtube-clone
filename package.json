@@ -12,15 +12,20 @@
     "babel-loader": "^8.0.4",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
+    "express-session": "^1.16.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^3.15.0",
     "mongoose": "^5.3.12",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
     "node-sass": "^4.10.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
     "sass-loader": "^7.1.0",
@@ -29,8 +34,8 @@
   },
   "scripts": {
     "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore 'scss' ",
-    "dev:assets": "WEBPACK_ENV=development webpack -w",
-    "build:assets": "WEBPACK_ENV=production webpack"
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "cross-env WEBPACK_ENV=production webpack"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
