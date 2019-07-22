@@ -1,6 +1,6 @@
+import passport from "passport";
 import routes from "../routes";
 import User from "../models/User";
-import passport from "passport";
 
 export const getJoin = (req, res) => {
   res.render("join", { pageTitle: "Join" });
@@ -15,7 +15,7 @@ export const postJoin = async (req, res, next) => {
     res.render("join", { pageTitle: "Join" });
   } else {
     try {
-      const user = await User.create({
+      const user = await User({
         name,
         email
       });
@@ -30,13 +30,18 @@ export const postJoin = async (req, res, next) => {
 
 export const getLogin = (req, res) =>
   res.render("login", { pageTitle: "Log In" });
+
 export const postLogin = passport.authenticate("local", {
   failureRedirect: routes.login,
   successRedirect: routes.home
 });
 
+export const githubLoginCallback = (accessToken, refreshToken, profile, cb) => {
+  console.log(accessToken, refreshToken, profile, cb);
+};
+
 export const logout = (req, res) => {
-  // To Do: Process Log Out
+  req.logout();
   res.redirect(routes.home);
 };
 
