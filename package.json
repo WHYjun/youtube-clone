@@ -12,6 +12,7 @@
     "autoprefixer": "^9.3.1",
     "aws-sdk": "^2.361.0",
     "axios": "^0.18.0",
+    "babel-loader": "^8.0.6",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
