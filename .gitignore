@@ -77,5 +77,6 @@ typings/
 package-lock.json
 
 # uploaded videos
+upload
 uploads
 static
