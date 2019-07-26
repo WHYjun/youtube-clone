@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import "./models/Comment";
 import "./models/User";
 import "./models/Video";
+import "@babel/polyfill";
 
 dotenv.config();
 
