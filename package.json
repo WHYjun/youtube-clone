@@ -51,7 +51,6 @@
     "start": "node build/init.js"
   },
   "devDependencies": {
-    "babel-loader": "^8.0.6",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",

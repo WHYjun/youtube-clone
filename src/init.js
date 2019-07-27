@@ -5,7 +5,6 @@ import "./models/Comment";
 import "./models/User";
 import "./models/Video";
 import "@babel/polyfill";
-import "babel-polyfill";
 
 dotenv.config({ path: __dirname + "/.env" });
 
