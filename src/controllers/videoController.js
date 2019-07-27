@@ -39,10 +39,10 @@ export const getUpload = (req, res) =>
 export const postUpload = async (req, res) => {
   const {
     body: { title, description },
-    file: { path }
+    file: { location }
   } = req;
   const newVideo = await Video.create({
-    fileUrl: path,
+    fileUrl: location,
     title,
     description,
     creator: req.user.id
@@ -152,24 +152,6 @@ export const postAddComment = async (req, res) => {
     });
     video.comments.push(newComment.id);
     video.save();
-    res.send(JSON.stringify(newComment));
-  } catch (error) {
-    res.status(400);
-  } finally {
-    res.end();
-  }
-};
-
-export const postRemoveComment = async (req, res) => {
-  const {
-    params: { id },
-    user
-  } = req;
-  try {
-    const comment = await Comment.findById(id);
-    if (String(comment.creator) === user.id) {
-      await Comment.findOneAndRemove({ _id: id });
-    }
   } catch (error) {
     res.status(400);
   } finally {
