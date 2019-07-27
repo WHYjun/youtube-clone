@@ -76,7 +76,8 @@ typings/
 .fusebox/
 package-lock.json
 
-# uploaded videos
+# compiled
 upload
 uploads
 static
+build

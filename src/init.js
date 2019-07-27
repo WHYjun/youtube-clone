@@ -5,8 +5,9 @@ import "./models/Comment";
 import "./models/User";
 import "./models/Video";
 import "@babel/polyfill";
+import "babel-polyfill";
 
-dotenv.config();
+dotenv.config({ path: __dirname + "/.env" });
 
 const PORT = process.env.PORT || 4000;
 

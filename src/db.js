@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ path: __dirname + "/.env" });
 
 mongoose.connect(process.env.MONGO_URL_PROD, {
   useNewUrlParser: true,
